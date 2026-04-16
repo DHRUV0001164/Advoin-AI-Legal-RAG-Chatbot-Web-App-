@@ -19,7 +19,7 @@
 
 Built using **Retrieval-Augmented Generation (RAG)**, the system ensures responses are **accurate, contextual, and grounded in real data**.
 
-> 💡 From Jupyter Notebook → to a complete real-world web application
+
 
 ---
 
