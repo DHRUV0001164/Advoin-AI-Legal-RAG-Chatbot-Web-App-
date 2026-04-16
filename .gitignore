@@ -1,0 +1,16 @@
+# Environment variables (API Keys)
+.env
+
+# Python caches and virtual environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Large PDF files and temporal processing files
+knowledge_pdfs/
+*.pdf
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Rights AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="header-content">
+                    <h1><i class="fa-solid fa-scale-balanced" style="color: var(--accent); margin-right: 12px;"></i> Legal Rights Assistant</h1>
+                    <span class="status"><i class="fa-solid fa-circle"></i> Ready to help</span>
+                </div>
+                <div class="header-actions">
+                    <button class="draft-btn" id="open-modal-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Draft FIR
+                    </button>
+                </div>
+            </header>
+            
+            <div class="chat-box" id="chat-box">
+                <div class="message bot-message">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="text">
+                        Hello! I am your legal assistant. I am pre-trained with important legal documents. Please ask me any legal questions you have, and I will assist you. You can also securely draft an FIR PDF using the "Draft FIR" button at the top.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Ask a strictly legal question in any language..." autocomplete="off">
+                    <button class="send-btn" id="send-btn" title="Send message">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="disclaimer-text">I only answer questions related to law, rights, and legislation.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- FIR Draft Modal -->
+    <div class="modal-overlay" id="fir-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-file-signature"></i> Draft First Information Report (FIR)</h2>
+                <button class="close-btn" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Provide a detailed description of the incident below. Include names, location, date, and exactly what happened. The AI will convert this into a formal legal FIR document and download it as a PDF.</p>
+                <textarea id="fir-description" placeholder="Describe the incident clearly..." rows="6"></textarea>
+                <div id="modal-status" class="status-msg hidden"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn secondary" id="cancel-modal-btn">Cancel</button>
+                <button class="btn primary" id="generate-fir-btn"><i class="fa-solid fa-file-export"></i> Generate PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
